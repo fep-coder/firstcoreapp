@@ -1,3 +1,4 @@
+using Customers.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Customers.Controllers
@@ -10,9 +11,16 @@ namespace Customers.Controllers
                         return View();
                 }
 
+                [HttpGet]
                 public ViewResult CustomerForm()
                 {
                         return View();
+                }
+
+                [HttpPost]
+                public ViewResult CustomerForm(Customer customer)
+                {
+                        return View("Thanks");
                 }
 
         }
