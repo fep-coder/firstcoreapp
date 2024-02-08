@@ -10,5 +10,10 @@ namespace Customers.Controllers
                         return View();
                 }
 
+                public ViewResult CustomerForm()
+                {
+                        return View();
+                }
+
         }
 }
