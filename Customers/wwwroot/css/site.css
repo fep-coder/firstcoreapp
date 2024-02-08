@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+div.validation-summary-errors ul {
+        background: red;
+        list-style-type: none;
+        color: white;
+        padding: 20px;
+}
+
+.input-validation-error {
+        border: 1px solid red;
+}

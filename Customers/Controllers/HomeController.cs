@@ -20,8 +20,16 @@ namespace Customers.Controllers
                 [HttpPost]
                 public ViewResult CustomerForm(Customer customer)
                 {
-                        Repository.AddResponse(customer);
-                        return View("Thanks", customer);
+                        if (ModelState.IsValid)
+                        {
+                                Repository.AddResponse(customer);
+                                return View("Thanks", customer);
+                        }
+                        else
+                        {
+                                return View();
+                        }
+
                 }
 
                 public ViewResult ListReturners()
