@@ -24,5 +24,10 @@ namespace Customers.Controllers
                         return View("Thanks", customer);
                 }
 
+                public ViewResult ListReturners()
+                {
+                        return View(Repository.Responses.Where(r => r.WillBuyAgain == true));
+                }
+
         }
 }
