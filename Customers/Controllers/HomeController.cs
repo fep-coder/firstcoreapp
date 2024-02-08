@@ -20,7 +20,8 @@ namespace Customers.Controllers
                 [HttpPost]
                 public ViewResult CustomerForm(Customer customer)
                 {
-                        return View("Thanks");
+                        Repository.AddResponse(customer);
+                        return View("Thanks", customer);
                 }
 
         }
